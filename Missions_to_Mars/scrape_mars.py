@@ -43,12 +43,10 @@ def scrape_info():
 
 	url2="https://spaceimages-mars.com/"
 	browser.visit(url2)
+	browser.find_by_css('button')[1].click()
+	featured_image_url= browser.find_by_css('img')['src']
 
 
-
-	featured_image_url = browser.links.find_by_partial_text("image/featured/mars3.jpg")
-	featured_image_url = url2 + featured_image_url
-	featured_image_url
 	mars['featured_image_url'] = featured_image_url
 
 
