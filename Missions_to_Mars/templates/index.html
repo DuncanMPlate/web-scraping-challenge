@@ -17,12 +17,46 @@
 			<p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
 		</div>
 		
-		
+		<div class="col-md-12">
 		<h3>Mars Headlines: {{ mars.headlines }}</h3>
-		<h3>Mars Content: {{ mars.content }}</h3>
-		<h3>Mars_featured_img: {{mars.featured_image_url}}</h3>
-		<h3>Mars Facts: {{mars.mars_facts}}</h3>
-		<h3>Mars Hemispheres: {{mars.hemisphere_image_urls}}</h3>
+		<p>Mars Content: {{ mars.content }}</p>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<img src="{{mars.featured_image_url}}">
+			</div>
+		</div>
+		<div class="col-md-12"><table class="table">{{mars.mars_facts}}</table></div>
+		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="{{ mars.hemisphere_image_urls[0].image_url }}" class="d-block w-100"
+						alt="{{ mars.hemisphere_image_urls[0].title }}">
+				</div>
+				<div class="carousel-item">
+					<img src="{{ mars.hemisphere_image_urls[1].image_url }}" class="d-block w-100"
+						alt="{{ mars.hemisphere_image_urls[1].title }}">
+				</div>
+				<div class="carousel-item">
+					<img src="{{ mars.hemisphere_image_urls[2].image_url }}" class="d-block w-100"
+						alt="{{ mars.hemisphere_image_urls[2].title }}">
+				</div>
+				<div class="carousel-item">
+					<img src="{{ mars.hemisphere_image_urls[3].image_url }}" class="d-block w-100"
+						alt="{{ mars.hemisphere_image_urls[3].title }}">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
 	</div>
 	</div>
 </body>
