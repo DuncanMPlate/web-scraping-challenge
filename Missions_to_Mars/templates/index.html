@@ -23,10 +23,16 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<img src="{{mars.featured_image_url}}">
+				<img src="{{ mars.featured_image_url }}">
 			</div>
 		</div>
-		<div class="col-md-12"><table class="table">{{mars.mars_facts}}</table></div>
+		<div class="col-md-12">
+			<table class="table-dark">
+				<h3>Facts about Mars</h3>
+				<p>{{ mars.mars_facts|safe }}</p>
+			</table>
+		</div>
+
 		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
